@@ -65,7 +65,7 @@ namespace GTA_SA_Hack
                 }
                 if (Money.Checked == true)
                 {
-                    vam.WriteInt32((IntPtr)money, 900000);
+                    vam.WriteInt32((IntPtr)money, 90000);
                 }
             }
             catch (Exception ex)
