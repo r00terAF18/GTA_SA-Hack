@@ -26,3 +26,17 @@ C:\Users\ahroo\Documents\Hacks\GTA-SA Hack v0.2\GTA-SA Hack\obj\Debug\GTA-SA Hac
 C:\Users\ahroo\Documents\Hacks\GTA-SA Hack v0.2\GTA-SA Hack\obj\Debug\GTA-SA Hack.csproj.CopyComplete
 C:\Users\ahroo\Documents\Hacks\GTA-SA Hack v0.2\GTA-SA Hack\obj\Debug\GTA-SA Hack.exe
 C:\Users\ahroo\Documents\Hacks\GTA-SA Hack v0.2\GTA-SA Hack\obj\Debug\GTA-SA Hack.pdb
+C:\Users\ahroo\Documents\GitHub\GTA_SA-Hack\GTA-SA Hack v0.2\GTA-SA Hack\bin\Debug\GTA-SA Hack.exe.config
+C:\Users\ahroo\Documents\GitHub\GTA_SA-Hack\GTA-SA Hack v0.2\GTA-SA Hack\bin\Debug\GTA-SA Hack.exe
+C:\Users\ahroo\Documents\GitHub\GTA_SA-Hack\GTA-SA Hack v0.2\GTA-SA Hack\bin\Debug\GTA-SA Hack.pdb
+C:\Users\ahroo\Documents\GitHub\GTA_SA-Hack\GTA-SA Hack v0.2\GTA-SA Hack\bin\Debug\Memory.dll
+C:\Users\ahroo\Documents\GitHub\GTA_SA-Hack\GTA-SA Hack v0.2\GTA-SA Hack\bin\Debug\VAMemory.dll
+C:\Users\ahroo\Documents\GitHub\GTA_SA-Hack\GTA-SA Hack v0.2\GTA-SA Hack\bin\Debug\Memory.xml
+C:\Users\ahroo\Documents\GitHub\GTA_SA-Hack\GTA-SA Hack v0.2\GTA-SA Hack\obj\Debug\GTA-SA Hack.csprojAssemblyReference.cache
+C:\Users\ahroo\Documents\GitHub\GTA_SA-Hack\GTA-SA Hack v0.2\GTA-SA Hack\obj\Debug\GTA_SA_Hack.Form1.resources
+C:\Users\ahroo\Documents\GitHub\GTA_SA-Hack\GTA-SA Hack v0.2\GTA-SA Hack\obj\Debug\GTA_SA_Hack.Properties.Resources.resources
+C:\Users\ahroo\Documents\GitHub\GTA_SA-Hack\GTA-SA Hack v0.2\GTA-SA Hack\obj\Debug\GTA-SA Hack.csproj.GenerateResource.cache
+C:\Users\ahroo\Documents\GitHub\GTA_SA-Hack\GTA-SA Hack v0.2\GTA-SA Hack\obj\Debug\GTA-SA Hack.csproj.CoreCompileInputs.cache
+C:\Users\ahroo\Documents\GitHub\GTA_SA-Hack\GTA-SA Hack v0.2\GTA-SA Hack\obj\Debug\GTA-SA Hack.csproj.CopyComplete
+C:\Users\ahroo\Documents\GitHub\GTA_SA-Hack\GTA-SA Hack v0.2\GTA-SA Hack\obj\Debug\GTA-SA Hack.exe
+C:\Users\ahroo\Documents\GitHub\GTA_SA-Hack\GTA-SA Hack v0.2\GTA-SA Hack\obj\Debug\GTA-SA Hack.pdb

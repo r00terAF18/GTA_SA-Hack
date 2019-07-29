@@ -19,11 +19,6 @@ namespace GTA_SA_Hack
           Offset = 540
         */
 
-        
-        //// get key press state
-        //[DllImport("user32.dll")]
-        //static extern short GetAsyncKeyState(int vKey);
-
         // get proccess name
         static string procName = "gta-sa";
 
@@ -31,7 +26,7 @@ namespace GTA_SA_Hack
         static int playerAddress = 0x007FC7D8;
         static int playerHealthOffset = 0x540;
         static int moneyPointer = 0x530;
-        static int moneyAddress = 0x00347574;
+        static int moneyAddress = 0x00179FA0;
 
         // initilize Values
         VAMemory vam;
@@ -41,41 +36,71 @@ namespace GTA_SA_Hack
         int moneyBaseAddress;
         int money;
 
+        bool gameOn;
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void checkGame()
+        {
+           Process[] proces = Process.GetProcessesByName(procName);
+            if (proces.Length > 0)
+            {
+                gameOn = true;
+            }
+            else
+            {
+                gameOn = false;
+            }
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
             try
             {
-                // start memory object and calculate values
-                vam = new VAMemory(procName); // initilize a Memory reader object
-                baseAddress = (int)Process.GetProcessesByName(procName)[0].MainModule.BaseAddress; // get the Base Address, which we use to get all the other addresses
-                playerBaseAddress = vam.ReadInt32((IntPtr)baseAddress + playerAddress); // the player base address is basically the starting point
-                playerHealthAddress = playerBaseAddress + playerHealthOffset; // the player health address is calculated by adding the health offset to the player Base Address
-                moneyBaseAddress = vam.ReadInt32((IntPtr)baseAddress + moneyAddress);
-                money = moneyBaseAddress + moneyPointer;
+                checkGame();
+                if (gameOn)
+                {
+                    // start memory object and calculate values
+                    vam = new VAMemory(procName); // initilize a Memory reader object
+                    baseAddress = (int)Process.GetProcessesByName(procName)[0].MainModule.BaseAddress; // get the Base Address, which we use to get all the other addresses
+                    playerBaseAddress = vam.ReadInt32((IntPtr)baseAddress + playerAddress); // the player base address is basically the starting point
+                    playerHealthAddress = playerBaseAddress + playerHealthOffset; // the player health address is calculated by adding the health offset to the player Base Address
 
-                //check if any checkbox is checked
-                if (godMode.Checked == true)
-                {
-                    vam.WriteFloat((IntPtr)playerHealthAddress, 100); // write to the memory the value 100, so in another words 'unlimited health'
+                    //check if any checkbox is checked
+                    if (godMode.Checked == true)
+                    {
+                        vam.WriteFloat((IntPtr)playerHealthAddress, 100); // write to the memory the value 100, so in another words 'unlimited health'
+                    }
                 }
-                if (Money.Checked == true)
+                else
                 {
-					if (money < 90000)
-					{
-						vam.WriteInt32((IntPtr)money, 90000);
-					}
+
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                throw;
             }
             GC.Collect();
+        }
+
+        private void BtnAddMoney_Click(object sender, EventArgs e)
+        {
+            if (gameOn)
+            {
+                vam = new VAMemory(procName);
+                baseAddress = (int)Process.GetProcessesByName(procName)[0].MainModule.BaseAddress;
+                moneyBaseAddress = vam.ReadInt32((IntPtr)baseAddress + moneyAddress);
+                money = moneyBaseAddress + moneyPointer;
+                vam.WriteInt32((IntPtr)money, 900000); // this just overwrites the old value, it does not add up
+            }
+            else
+            {
+
+            }
         }
     }
 }
